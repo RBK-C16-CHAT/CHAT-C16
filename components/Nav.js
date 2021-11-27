@@ -1,5 +1,5 @@
 import Image from "next/image";
-function Nav() {
+function Nav({ logout }) {
   return (
     <nav className="flex  flex-col sm:flex-row m-5  justify-between items-center h-auto ">
       <Image
@@ -16,7 +16,10 @@ function Nav() {
         <p>picture here / </p>
 
         <h2>UserName</h2>
+
       </div>
+      
+      <div onClick={() => logout()}>
       <Image
         className="ml-1 object-contain float-right"
         alt="logout"
@@ -24,6 +27,7 @@ function Nav() {
         height={100}
         src="https://www.kindpng.com/picc/m/312-3120740_logout-hd-png-download.png"
       />
+      </div>
     </nav>
   );
 }
