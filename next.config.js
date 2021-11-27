@@ -1,3 +1,5 @@
 module.exports = {
-  reactStrictMode: true,
-}
+  images: {
+    domains: ["images.squarespace-cdn.com", "www.kindpng.com"],
+  },
+};
