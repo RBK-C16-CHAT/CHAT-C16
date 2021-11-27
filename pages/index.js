@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Login from '../components/Login'
-import Nav from '../components/nav'
-import Card from '../components/card'
-
+import { useRouter } from 'next/router'
 
 
 export default function Home() {
+  const router = useRouter()
+
 
   return (
 
@@ -17,12 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-      <Nav  />
-      <Card  />
-<Login/>
-    
-     
+      <Login />
+      <button type="button" onClick={() => router.push('/chats')}>
+        Click me
+      </button>
+
     </div>
   )
 }
