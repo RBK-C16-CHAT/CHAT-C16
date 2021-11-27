@@ -3,8 +3,8 @@ function Card() {
 
   return (
     <div className="w-96 p-80 mx-96 border border-gray-900">
-      {posts.map((post) => (
-        <div>{post}</div>
+      {posts.map((post,key) => (
+        <div key={key}>{post}</div>
       ))}
       <div className="flex flex-row-auto">
         <input
