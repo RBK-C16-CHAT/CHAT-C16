@@ -18,9 +18,9 @@ export default function Home() {
       </Head>
 
       
-      <Nav  />
+      <Nav   />
       <Card  />
-<Login/>
+      <Login />
     
      
     </div>
