@@ -1,13 +1,7 @@
 
 
 const Login = () => {
-//   const google = () => {
-//     window.open("http://localhost:5000/auth/google", "_self");
-//   };
 
-//   const github = () => {
-//     window.open("http://localhost:5000/auth/github", "_self");
-//   };
   return (
     <div className="login">
       <div className="wrapper">
@@ -20,7 +14,7 @@ const Login = () => {
             <img src="https://mpng.subpng.com/20180326/gxq/kisspng-github-computer-icons-icon-design-github-5ab8a31e334e73.4114704215220498222102.jpg" alt="" className="icon" />
             Github
           </div>
-        </div>
+        </div>  
         
       </div>
     </div>
