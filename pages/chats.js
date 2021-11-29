@@ -38,7 +38,7 @@ export default function Chats() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Nav user={user}  logout={logout} />
+            <Nav logout={logout} />
             <Card user={user}   />
             
         </div>

@@ -1,5 +1,5 @@
 import {useState} from "react";
-function Card() {
+function Card({user}) {
 //   const posts = ["post1", "post2", "post3", "post4"];
 const [messageInput,setMessageInput]= useState("")
 const [message,setMessage]= useState([])
@@ -22,7 +22,7 @@ const handleSubmit = (e) =>{
          <img src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144" alt="" class="w-10 sm:w-16 h-10 sm:h-16 rounded-full"/>
          <div class="flex flex-col leading-tight">
             <div class="text-2xl mt-1 flex items-center">
-               <span class="text-gray-700 mr-3">Anderson Vanhron</span>
+               <span class="text-gray-700 mr-3">{user}</span>
                <span class="text-green-500">
                   <svg width="10" height="10">
                      <circle cx="5" cy="5" r="5" fill="currentColor"></circle>
@@ -36,7 +36,6 @@ const handleSubmit = (e) =>{
 
    <div id="messages" class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
       <div class="chat-message">
-      {/* {posts.map((post) => ( */}
          {message.length>= 1 ? message.map((e,key)=>{
                   return (
             <div class="flex items-end">
