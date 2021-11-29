@@ -14,7 +14,7 @@ const Login = () => {
             <img src="https://mpng.subpng.com/20180326/gxq/kisspng-github-computer-icons-icon-design-github-5ab8a31e334e73.4114704215220498222102.jpg" alt="" className="icon" />
             Github
           </div>
-        </div>
+        </div>  
         
       </div>
     </div>
