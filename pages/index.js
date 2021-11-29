@@ -1,14 +1,30 @@
 import Head from 'next/head'
-import Login from '../components/Login'
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 
 
+
+
 export default function Home() {
+
+  const [name, setName] = useState('')
   const router = useRouter()
 
+  useEffect(() => {
+    var user = LocalStorage.getItem('user')
+    if (user !== null) {
+      router.push('/chats')
+    }
+  }, [])
+
+  var login = () => {
+    if (name != '') {
+      LocalStorage.setItem('user', name)
+      router.push('/chats')
+    }
+  }
 
   return (
-
     <div >
       <Head>
         <title>C-16</title>
@@ -16,11 +32,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Login />
-      <button type="button" onClick={() => router.push('/chats')}>
-        Click me
-      </button>
 
+      <div >
+        <label htmlFor="name">Name</label>
+        <input onChange={e => { setName(e.target.value) }} name="name" type="text" autoComplete="name" />
+        <button onClick={() => { login() }}>Register</button>
+      </div>
     </div>
   )
+
+
+
 }
+
+
+
+

@@ -1,5 +1,5 @@
 import Image from "next/image";
-function Nav({ logout }) {
+function Nav({ logout , user }) {
   return (
     <nav className="flex  flex-col sm:flex-row m-5  justify-between items-center h-auto ">
       <Image
@@ -12,10 +12,8 @@ function Nav({ logout }) {
       <div
         className="flex flex-row 
        justify-between items-center"
-      >
-        <p>picture here / </p>
-
-        <h2>UserName</h2>
+      > 
+        <h2>{user}</h2>
 
       </div>
       
