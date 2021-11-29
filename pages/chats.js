@@ -15,7 +15,7 @@ export default function Chats() {
     
      
     useEffect(()=>{
-    const name = localStorage.getItem('user')
+    const name = window.localStorage.getItem('user')
        if(name == null){
         router.push('/')
        }
@@ -24,7 +24,7 @@ export default function Chats() {
 
 
     var logout=()=>{
-        localStorage.removeItem('user')
+        window.localStorage.removeItem('user')
         router.push('/')
     }
 
