@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Login from '../components/Login'
 import Nav from '../components/nav'
 import Card from '../components/card'
 import { useRouter } from 'next/router'
@@ -38,7 +36,7 @@ export default function Chats() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Nav user={user}  logout={logout} />
+            <Nav logout={logout} />
             <Card user={user}   />
             
         </div>

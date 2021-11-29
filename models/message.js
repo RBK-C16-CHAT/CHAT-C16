@@ -1,6 +1,4 @@
 import mongoose from 'mongoose';
-import User from './user'
-
 var Schema = mongoose.Schema;
 
 var message = new Schema({
