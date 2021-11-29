@@ -2,8 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-pink-300 text-black;
-  }
-}
+

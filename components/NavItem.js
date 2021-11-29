@@ -1,6 +1,7 @@
-function NavItem({ Icon, title }) {
+function NavItem({ Icon, title , logout}) {
   return (
-    <div
+    <div 
+    onClick={()=>{logout()}}
       className="flex flex-col items-center cursor-pointer group
         w-12 sm:w-20 hover:text-white"
     >

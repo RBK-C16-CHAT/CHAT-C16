@@ -14,7 +14,7 @@ function Nav({ logout, user }) {
         <NavItem title="HOME" Icon={HomeIcon} />
         <NavItem title="SEARCH" Icon={SearchIcon} />
         <NavItem title="PROFILE" Icon={UserIcon} />
-        <NavItem onClick={() => logout()} title="LOGOUT" Icon={LogoutIcon} />
+        <NavItem logout={logout} title="LOGOUT" Icon={LogoutIcon} />
       </div>
       <div>
         <h1 className="text-2xl"> {user}</h1>
