@@ -9,9 +9,10 @@ export default function Home() {
 
   const [name, setName] = useState('')
   const router = useRouter()
+ 
 
   useEffect(() => {
-    var user = LocalStorage.getItem('user')
+    var user = window.localStorage.getItem('user')
     if (user !== null) {
       router.push('/chats')
     }
@@ -19,7 +20,7 @@ export default function Home() {
 
   var login = () => {
     if (name != '') {
-      LocalStorage.setItem('user', name)
+      window.localStorage.setItem('user', name)
       router.push('/chats')
     }
   }
