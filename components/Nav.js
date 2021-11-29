@@ -7,8 +7,7 @@ import {
   LogoutIcon,
 } from "@heroicons/react/outline";
 
-
-function Nav({ logout }) {
+function Nav({ logout, user }) {
   return (
     <nav className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
       <div className="flex flex-grow justify-evenly max-w-2xl">
@@ -18,6 +17,7 @@ function Nav({ logout }) {
         <NavItem onClick={() => logout()} title="LOGOUT" Icon={LogoutIcon} />
       </div>
       <div>
+        <h1 className="text-2xl"> {user}</h1>
         {/* <Image
           height={100}
           width={100}
