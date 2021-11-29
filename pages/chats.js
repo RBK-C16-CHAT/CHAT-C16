@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Login from '../components/Login'
 import Nav from '../components/nav'
 import Card from '../components/card'
 import { useRouter } from 'next/router'
