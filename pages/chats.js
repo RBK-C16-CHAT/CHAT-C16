@@ -4,12 +4,27 @@ import Login from '../components/Login'
 import Nav from '../components/nav'
 import Card from '../components/card'
 import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
+
 
 
 export default function Chats() {
+    
     const router = useRouter()
+    const [user,setUser]=useState('')
+    
+     
+    useEffect(()=>{
+    const name = localStorage.getItem('user')
+       if(name == null){
+        router.push('/')
+       }
+       setUser(name)
+    },[])
+
 
     var logout=()=>{
+        localStorage.removeItem('user')
         router.push('/')
     }
 
@@ -23,12 +38,9 @@ export default function Chats() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Nav logout={logout} />
-            <Card />
+            <Nav user={user}  logout={logout} />
+            <Card user={user}   />
             
-
-
-
         </div>
     )
 }
