@@ -10,7 +10,7 @@ const handler = async (req, res) => {
         
     }
     else if (req.method === 'GET') {
-       Message.find().populate('user')
+       Message.find()
        .then((data)=>{return res.status(200).send(data)})
        .catch((err)=>{return res.status(500).send(err)})
     }
